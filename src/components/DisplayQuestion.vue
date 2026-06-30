@@ -37,13 +37,10 @@ const props = defineProps({
       <Rating v-if="props.question.response_type === 'rating'"  :questionId="props.question.id"/>
    
       <div v-if="props.question.response_type === 'long_text'">
-        <CardDescription>Is there anything you would like to add to help us improve the Sunday School program?</CardDescription>
+        <CardDescription>Type your comments here</CardDescription>
         <Textarea  />
       </div>
     </CardContent>
     </div>  
   </Card>
-
-
-
 </template>

@@ -4,12 +4,21 @@ import DisplayQuestion from "./components/DisplayQuestion.vue";
 import Footer from "./components/Footer.vue";
 import { Button } from '@/components/ui/button'
 
-const props = defineProps({
-  questions: {
-    type: Array,
-    default: () => questions,
-  },
-});
+const props = withDefaults(
+  defineProps<{
+    questions?: typeof questions;
+  }>(),
+  {
+    questions: () => questions,
+  }
+);
+
+const handleSubmit = (event: Event) => {
+  event.preventDefault();
+  
+  const formData = new FormData();
+  // Add your form submission logic here
+};
 </script>
 
 <template>
@@ -29,8 +38,8 @@ const props = defineProps({
         >
       </p>
     </div>
-
-    <div class="py-8 mx-auto px-6 container bg-secondary">
+    <form>
+          <div class="py-8 mx-auto px-6 container bg-secondary">
       <DisplayQuestion
         v-for="question in props.questions"
         :key="question.id"
@@ -38,10 +47,10 @@ const props = defineProps({
         class="mb-4"
       />
       <div class="py-8 mx-auto text-center text-2xl w-full">
-        <Button>Submit Survey</Button>
+        <Button @click="handleSubmit">Submit Survey</Button>
       </div>
-
-    </div>
+        </div>
+    </form>  
     <Footer />
 
   </div>

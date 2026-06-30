@@ -1,117 +1,27 @@
 [
-        {
-            "id": 1,
-            "text": "Our instructors are competent and knowledgeable about the Bible and the selected lessons each week.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 2,
-            "text": "I am fully confident the answers given during sessions are not based on opinion or personal perspective.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 3,
-            "text": "The Sunday School sessions are well-organized and structured in a way that facilitates learning.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 4,
-            "text": "The instructors are always able to guide and keep the class on-topic",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 5,
-            "text": "The instructor makes learning the Bible exciting.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 6,
-            "text": "Occasionally, I fall asleep, loose focus, or start to think about unrelated Sunday School activities during class sessions.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 7,
-            "text": "I feel that my participation and contributions are valued during Sunday School sessions.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 8,
-            "text": "I often feel pressured to share my input and perspective during class sessions.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 9,
-            "text": "We spend too much time focusing on politics, religious denominations, and/or other controversial topics during our Sunday School lessons.",
-            "response_type": "rating"   
-        }, 
-        {
-            "id": 10,
-            "text": "I love to study God’s Word (The Bible) and believe that Sunday School is an essential component of Christian lifestyle.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 11,
-            "text": "I am interested in continuing my Sunday School education as a teacher.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 12,
-            "text": "I feel that the Sunday School sessions contribute positively to my understanding and application of biblical teachings.",
-            "response_type": "rating"           
-        }, 
-        {
-            "id": 13,
-            "text": "Sunday school is a waste of time. I can learn better studying the Bible at home.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 14,
-            "text": "After each class, I can easily summarize what I have learned in 2 sentences or less.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 15,
-            "text": "I anticipate the opportunity to get up and make it to Sunday school on time (9 am) so that I do not miss.",
-            "response_type": "rating"
-        },
-        {
-            "id": 16,
-            "text": "I’ve learned so much about the Bible during my commitment to attending Sunday School each week.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 17,
-            "text": "Sunday School is an excellent way to break down and  understand the Bible in small consumable increments.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 18,
-            "text": "Our instructors introduce creative ways to encourage full class participation, engagement, and collective learning activities.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 19,
-            "text": "I can confidently connect and apply the Sunday school Bible lessons to my life.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 20,
-            "text": "I am a faithful member of Bethesda Temple Church of Alton.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 21,
-            "text": "I often listen to my instructors and feel like I could do a better job teaching the lesson.",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 22,
-            "text": "I take the time to study my lesson before class to be better prepared to share. ",
-            "response_type": "rating"
-        }, 
-        {
-            "id": 23,
-            "text": "Comments",
-            "response_type": "long_text"
-        }
+    {
+        "id": 1,
+        "text": "The lesson content is clear and easy to understand.",
+        "response_type": "rating"
+    },
+    {
+        "id": 2,
+        "text": "The teacher explains the Bible in a way I can apply to daily life.",
+        "response_type": "rating"
+    },
+    {
+        "id": 3,
+        "text": "Class discussions stay focused on the lesson objectives.",
+        "response_type": "rating"
+    },
+    {
+        "id": 4,
+        "text": "I feel comfortable participating and sharing during class.",
+        "response_type": "rating"
+    },
+    {
+        "id": 5,
+        "text": "Please share any suggestions for how we can improve in Sunday School.",
+        "response_type": "long_text"
+    }
 ]
