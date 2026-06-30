@@ -13,12 +13,6 @@ const props = withDefaults(
   }
 );
 
-const handleSubmit = (event: Event) => {
-  event.preventDefault();
-  
-  const formData = new FormData();
-  // Add your form submission logic here
-};
 </script>
 
 <template>
@@ -30,14 +24,17 @@ const handleSubmit = (event: Event) => {
         Bethesda Temple Church of Alton
       </h1>
       <p class="text-center text-sm mt-2">SUNDAY SCHOOL SURVEY</p>
-      <p class="text-center text-lg">
+  
+    </div>
+
+        <p class="text-center text-lg font-bold">
         Please take a moment to complete the survey. <br />
         <span class="text-sm"
           >Your feedback is valuable to us and will help improve our Sunday
           School program.</span
         >
       </p>
-    </div>
+
     <form>
           <div class="py-8 mx-auto px-6 container bg-secondary">
       <DisplayQuestion
@@ -47,7 +44,7 @@ const handleSubmit = (event: Event) => {
         class="mb-4"
       />
       <div class="py-8 mx-auto text-center text-2xl w-full">
-        <Button @click="handleSubmit">Submit Survey</Button>
+        <Button type="submit">Submit Survey</Button>
       </div>
         </div>
     </form>  
@@ -58,7 +55,8 @@ const handleSubmit = (event: Event) => {
 
 <style scoped>
 .header-container {
-  background-color: var(--color-white);
-  color: var(--color-on-primary);
+  background-color: var(--color-primary);
+  color: white;
+  
 }
 </style>

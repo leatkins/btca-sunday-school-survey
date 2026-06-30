@@ -14,10 +14,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <RadioGroup>
+  <RadioGroup :name="'q_' + props.questionId">
     <div class="flex items-center space-x-2">
       <RadioGroupItem :id="'r1_' + props.questionId" value="0" />
-      <Label>Strongly Disagree</Label>
+      <Label :for="'r1_' + props.questionId">Strongly Disagree</Label>
     </div>
     <div class="flex items-center space-x-2">
       <RadioGroupItem :id="'r2_' + props.questionId" value="1" />
