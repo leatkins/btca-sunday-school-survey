@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import questions from "./datasets/questions.json";
 import DisplayQuestion from "./components/DisplayQuestion.vue";
+import SurveyAlert from "./components/SurveyAlert.vue";
 import Footer from "./components/Footer.vue";
 import { Button } from '@/components/ui/button'
+import { ref } from 'vue'; 
 
 const props = withDefaults(
   defineProps<{
@@ -12,6 +14,35 @@ const props = withDefaults(
     questions: () => questions,
   }
 );
+
+const surveyError = ref(false); 
+const surveyMessage = ref('');
+ 
+async function sendSurvey(event: Event) {
+  event.preventDefault();
+  
+  const formData = new FormData((event.target as HTMLFormElement));
+
+  let response = await fetch('http://localhost:8080/collect_results', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(Object.fromEntries(formData.entries()))
+  });
+  
+  let results = await response.json();
+ 
+  if (results.error) {
+    surveyError.value = true;
+    surveyMessage.value = results.message || '';
+  } else { 
+    surveyError.value = false;
+    alert('Survey submitted successfully!');
+  }
+}
+
 
 </script>
 
@@ -35,7 +66,7 @@ const props = withDefaults(
         >
       </p>
 
-    <form>
+    <form @submit="sendSurvey">
           <div class="py-8 mx-auto px-6 container bg-secondary">
       <DisplayQuestion
         v-for="question in props.questions"
@@ -46,6 +77,7 @@ const props = withDefaults(
       <div class="py-8 mx-auto text-center text-2xl w-full">
         <Button type="submit">Submit Survey</Button>
       </div>
+      <SurveyAlert v-if="surveyError"  :message="surveyMessage" />
         </div>
     </form>  
     <Footer />

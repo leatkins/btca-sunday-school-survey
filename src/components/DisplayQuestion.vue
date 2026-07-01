@@ -38,7 +38,7 @@ const props = defineProps({
    
       <div v-if="props.question.response_type === 'long_text'">
         <CardDescription>Type your comments here</CardDescription>
-        <Textarea  />
+        <Textarea :name="'lt_' + props.question.id" />
       </div>
     </CardContent>
     </div>  
